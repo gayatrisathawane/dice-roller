@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice roller</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    <style>
+        body{
+           
+background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+
+        }
+        .heading{
+            text-align: center;
+            font-size: 50px;
+        }
+        .diceimg{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 120px;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+        .cantainer{
+            background-color: aliceblue;
+            width: 700px;
+            height: 400px;
+            margin-top: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px 20px;
+            box-shadow: 0px 0px 5px 0px black;
+           
+        }
+        .qoutes{
+           
+           
+            height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        }
+        .textp{
+            font-size: 30px;
+            padding: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1 class="heading">Dice Roller <span><img src="./images/dice.png" height="100px"  class="headimg"></span></h1>
+
+    <div class="cantainer">
+        <img src="./images/dice (1).png"  class="diceimg" id="imgdice">
+    
+
+    <button class="btn btn-warning text-center d-block mx-auto mt-5 px-5 fs-3" onclick="roll()">Roll</button>
+
+    <div class="qoutes">
+        <p id="text" class="textp"></p>
+    </div>
+    </div>
+    <script>
+
+       const  imgdice =document.getElementById('imgdice')
+       const textpara= document.getElementById('text')
+        function roll()
+        {
+            const min=1;
+            const max =7;
+
+            const randomnumber = Math.floor(Math.random() * (max-min )) + min;
+            switch(randomnumber)
+            {
+                case 1:
+                    {
+                         imgdice.src='./images/dice1.png';
+                         textpara.innerText='“A website without visitors is like a ship lost in the horizon.” ...';
+                         break;
+                    }
+
+                    case 2:
+                    {
+                         imgdice.src='./images/dice2.png';
+                         textpara.innerText='“If you think math is hard, try web design.”';
+                         break;
+                    }
+
+                    case 3:
+                    {
+                         imgdice.src='./images/dice3.png';
+                         textpara.innerText='“If debugging is the process of removing software bugs, then programming must be the process of putting them in” ...';
+                         break;
+                    }
+
+                    case 4:
+                    {
+                         imgdice.src='./images/dice4.png';
+                         textpara.innerText=' “Great web design without functionality is like a sports car with no engine.”';
+                         break;
+                    }
+
+                    case 5:
+                    {
+                         imgdice.src='./images/dice5.png';
+                         textpara.innerText='“Measuring programming progress by lines of code is like measuring aircraft building progress by weight.';
+                         break;
+                    }
+                    case 6:
+                    {
+                         imgdice.src='./images/dice6.png';
+                         textpara.innerText=' “Great web design without functionality is like a sports car with no engine.”';
+                         
+                       
+                    }
+            }
+
+        }
+        </script>
+
+
+
+</body>
+</html>
